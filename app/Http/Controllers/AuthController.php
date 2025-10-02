@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use PHPUnit\Framework\Attributes\WithoutErrorHandler;
 
 class AuthController extends Controller
@@ -41,13 +42,23 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        $data = $request->validate([
+        $request->validate([
             'nama' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' .User::class],
             'password' => ['required','confirmed'],
             'alamat' => ['required', 'string', 'max:255'],
             'no_hp' => ['required', 'numeric', 'max:15'],
             'no_ktp' => ['required', 'numeric', 'max:20'],
+        ]);
+
+        User::create([
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'alamat' => $request->alamat,
+            'no_hp' => $request->no_hp,
+            'no_ktp' => $request->no_ktp,
+            'role' => 'pasien',
         ]);
         return redirect()->route('login')->with('success', 'Registrasi berhasil. Silakan login.');
     }
