@@ -14,7 +14,7 @@
     @csrf
     <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="nama" required>
     </div>
     <div>
         <label for="email">Email:</label>

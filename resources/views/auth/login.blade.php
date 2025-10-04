@@ -5,7 +5,7 @@
 @endif
 
 <form method="POST" action="{{route('login')}}">
-    @@csrf
+    @csrf
     <label for="">Email :</label>
     <input type="email" name="email" required> <br>
 
@@ -15,4 +15,4 @@
     <button type="submit">Login</button>
 </form>
 
-<p>Belum punya akun? <a href="{{route('register')}}"></a>Daftar</p>
+<p>Sudah punya akun? <a href="{{ route('register') }}">register di sini</a></p>

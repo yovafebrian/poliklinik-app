@@ -18,10 +18,13 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->only([
+        $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
+        $credentials = $request->only('email', 'password');
+
+        // coba login 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             if($user->role == 'admin'){
@@ -31,8 +34,8 @@ class AuthController extends Controller
             }else{
                 return redirect()->route('pasien.dashboard');
             }
-            return back()->withErrors(['Email' => 'Email atau Password salah' ]);
         }
+        return back()->withErrors(['Email' => 'Email atau Password salah' ]);
     }
 
     public function showRegister()
@@ -47,8 +50,8 @@ class AuthController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' .User::class],
             'password' => ['required','confirmed'],
             'alamat' => ['required', 'string', 'max:255'],
-            'no_hp' => ['required', 'numeric', 'max:15'],
-            'no_ktp' => ['required', 'numeric', 'max:20'],
+            'no_hp' => ['required', 'string', 'max:15'],
+            'no_ktp' => ['required', 'string', 'max:20'],
         ]);
 
         User::create([
