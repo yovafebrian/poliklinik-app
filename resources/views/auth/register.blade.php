@@ -43,3 +43,4 @@
     <button type="submit">Register</button>
  </form>
 <p>Sudah punya akun? <a href="{{ route('login') }}">Login di sini</a></p>
+
