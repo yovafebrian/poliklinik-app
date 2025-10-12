@@ -1,3 +1,3 @@
-<footer class="main-footer"><strong>
-    copyright &copy; 2024 <a href="https://adminlte.io">Poliklink 2024</a>.</strong> All rights reserved.
+<footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">Poliklinik 2025</a>.</strong> All rights reserved.
 </footer>
