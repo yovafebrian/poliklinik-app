@@ -1,8 +1,7 @@
-<h1>Selamat Datang di Dashboard Pasien</h1>
-<form action="/logout" method="POST">
+<x-layouts.app title="Pasien Dahsboard">
+    <h1>Selamat Datang Pasien</h1>
+<form method="POST" action="/logout">
 @csrf
-    <button>
-        Logout
-    </button>
+<button type="submit">Logout</button>
 </form>
-@
+</x-layouts.app>
