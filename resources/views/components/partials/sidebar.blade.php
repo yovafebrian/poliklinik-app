@@ -11,7 +11,6 @@
                 <a href="#" class="d-block">Halo! {{ Auth::user()->nama }}</a>
             </div>
         </div>
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-sidebar flex-column">
@@ -32,8 +31,7 @@
                             <p>Manajemen Poli</p>
                         </a>
                     </li>
-
-                    <li>
+                    <li>    
                         <a href="{{ route('dokters.index') }}"
                             class="nav-link {{ request()->routeIs('dokters.*') ? 'active' : '' }}">
                             <i class="fas fa-hospital nav-item"></i>
@@ -77,39 +75,5 @@
                 </li>
             </ul>
         </nav>
-        {{-- <form method="POST" action="/logout" class="btn btn-danger ml-4">
-            @csrf
-            <button>Keluar</button>
-        </form> --}}
-    </div>
-</aside>
-
-                <!-- ROLE DOKTER -->
-                @if (request()->is('dokter*'))
-                    <li class="nav-item">
-                        <a href="{{ route('dokter.dashboard') }}" class="nav-link {{ request()->routeIs('dokter.dashboard') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-columns"></i>
-                            <p>
-                                Dashboard Dokter
-                            </p>
-                        </a>
-                    </li>
-                @endif
-
-                <li class="nav-item ">
-                    <form method="POST" action="/logout">
-                        @csrf
-                        <button type="submit" class="nav-link btn btn-danger text-left w-100">
-                            <i class="nav-icon fas fa-sign-out-alt"></i>
-                            <p>Keluar</p>
-                        </button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-        {{-- <form method="POST" action="/logout" class="btn btn-danger ml-4">
-            @csrf
-            <button>Keluar</button>
-        </form> --}}
     </div>
 </aside>
