@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\ObatController;
+use App\Http\Controllers\Admin\PasienController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DokterController;
+use App\Http\Controllers\ObatController as ControllersObatController;
+use App\Http\Controllers\PoliController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,10 +26,13 @@ Route::middleware(['auth','role:admin'])->prefix('admin')->group(function(){
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
-    Route::resource('polis', App\Http\Controllers\PoliController::class);
-    Route::resource('dokters', App\Http\Controllers\DokterController::class);
-    // Route::resource('pasiens', App\Http\Controllers\PasienController::class);
-    // Route::resource('obats', App\Http\Controllers\ObatController::class);
+
+    Route::resource('polis', PoliController::class);
+    Route::resource('dokters', DokterController::class);
+
+    // tambahkan resource untuk pasien dan obat
+    Route::resource('pasiens',PasienController::class);
+    Route::resource('obats', ControllersObatController::class);
 });
 
 Route::middleware(['auth','role:dokter'])->prefix('dokter')->group(function () {

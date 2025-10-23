@@ -31,11 +31,23 @@
                             <p>Manajemen Poli</p>
                         </a>
                     </li>
-                    <li>    
-                        <a href="{{ route('dokters.index') }}"
-                            class="nav-link {{ request()->routeIs('dokters.*') ? 'active' : '' }}">
-                            <i class="fas fa-hospital nav-item"></i>
-                            <p>Manajemen Dokter</p>
+                    <li class="nav-item">
+                    <a href="{{ route('dokters.index') }}" class="nav-link {{ request()->routeIs('dokters.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-hospital"></i>
+                        <p>Manajemen Dokter</p>
+                    </a>
+                </li>
+                    <li class="nav-item">
+                        <a href="{{ route('pasiens.index') }}" class="nav-link {{ request()->routeIs('pasiens.*') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-user-injured"></i>
+                            <p>Manajemen Pasien</p>
+                        </a>
+                </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('obats.index') }}" class="nav-link {{ request()->routeIs('obats.*') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-pills"></i>
+                            <p>Manajemen Obat</p>
                         </a>
                     </li>
                 @endif
