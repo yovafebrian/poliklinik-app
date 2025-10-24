@@ -73,11 +73,6 @@ class DokterController extends Controller
         return view('admin.dokters.edit', compact('dokter', 'polis'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     * $dokter adalah route model binding jadi yang harus nya kita buat
-     * $dokter = User::findOrFail($id); kita bisa membuat menjadi parameter, namun jika menggunakan ccara tersebut kita route nya tidak bisa admin/dokter{id}/edit namun seperi admin/dokter/{dokter}/edit
-     */
 
     public function update(Request $request, User $dokter)
     {
@@ -88,7 +83,7 @@ class DokterController extends Controller
             'no_ktp' => 'required|string|max:16|unique:users,no_ktp,' . $dokter->id, // “Email harus unik, tapi jangan hitung email si dokter yang ini.”
             'no_hp' => 'required|string|max:15',
             'id_poli' => 'required|string|exists:poli,id', // intinya id nya ada di poli
-            // 'email' => 'required|string|unique:users,email',
+            // 'email' => 'required|string|unique:users,email',http://127.0.0.1:8000
             'email' => 'required|string|unique:users,email,' . $dokter->id, // No KTP harus unik, tapi jangan hitung NO KTP si dokter yang ini.”
             'password' => 'nullable|string|min:6',
         ]);

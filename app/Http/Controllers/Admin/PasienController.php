@@ -23,7 +23,7 @@ class PasienController extends Controller
      */
     public function create()
     {
-        return view('admin.pasiens.create');
+        return view('admin.pasien.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class PasienController extends Controller
     public function edit(string $id)
     {
         $pasien = User::where('role', 'pasien')->findOrFail($id);
-        return view('admin.pasien.edit', compact('pasien'));
+        return view('admin.pasiens.edit', compact('pasien'));
     }
 
     /**
@@ -100,7 +100,7 @@ class PasienController extends Controller
 
         $pasien->update($updateData);
 
-        return redirect()->route('pasien.index')->with('success', 'Pasien berhasil diperbarui.');
+        return redirect()->route('pasiens.index')->with('success', 'Pasien berhasil diperbarui.');
     }
 
     /**
@@ -111,6 +111,6 @@ class PasienController extends Controller
         $pasien = User::where('role', 'pasien')->findOrFail($id);
         $pasien->delete();
 
-        return redirect()->route('pasien.index')->with('success', 'Pasien berhasil dihapus.');
+        return redirect()->route('pasiens.index')->with('success', 'Pasien berhasil dihapus.');
     }
 }
