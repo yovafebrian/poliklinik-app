@@ -1,0 +1,5 @@
+fix: Update sidebar navigation for better structure and accessibility
+
+style: Improve login and registration forms with better error handling and layout
+
+feat: Add flash messages for user feedback on Jadwal Periksa actions

@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 be2fd31530c8d35386d0dea542ad15bacd67b856 yovafebrian <yova.febrian512@gmail.com> 1759387920 +0700	commit (initial): first commit
+be2fd31530c8d35386d0dea542ad15bacd67b856 0000000000000000000000000000000000000000 yovafebrian <yova.febrian512@gmail.com> 1759387979 +0700	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 be2fd31530c8d35386d0dea542ad15bacd67b856 yovafebrian <yova.febrian512@gmail.com> 1759387979 +0700	Branch: renamed refs/heads/master to refs/heads/main
+be2fd31530c8d35386d0dea542ad15bacd67b856 f2ca1696fceea6d475fdf757b4723bd217228803 yovafebrian <yova.febrian512@gmail.com> 1759390769 +0700	commit: add RoleMiddleware
+f2ca1696fceea6d475fdf757b4723bd217228803 0174171cb8380f96f3bdb801a087ffb8cff32bf4 yovafebrian <yova.febrian512@gmail.com> 1759595498 +0700	commit: add routelist, dashboard admin, dashboard dokter, dashboard pasien
+0174171cb8380f96f3bdb801a087ffb8cff32bf4 e3d0c62ad745e6cd493f3174a734ca0b7b2302ce yovafebrian <yova.febrian512@gmail.com> 1759984740 +0700	commit: add adminLTE
+e3d0c62ad745e6cd493f3174a734ca0b7b2302ce 39862d7138eab6bf601c75577268429cb1f5bd78 yovafebrian <yova.febrian512@gmail.com> 1760281998 +0700	commit: add partials footer,header, sidebar
+39862d7138eab6bf601c75577268429cb1f5bd78 91a7687d6dfc86bf7aaa3a8356e497d50f1a69da yovafebrian <yova.febrian512@gmail.com> 1760283104 +0700	commit: add guest.blade.php
+91a7687d6dfc86bf7aaa3a8356e497d50f1a69da b9b0a1344410dc975695934af78ebeb386667b11 yovafebrian <yova.febrian512@gmail.com> 1760596202 +0700	commit: add management poli and management dokter
+b9b0a1344410dc975695934af78ebeb386667b11 a2f00db2702875c7d11ee92de90e367678df4fc4 yovafebrian <yova.febrian512@gmail.com> 1760601034 +0700	commit: update styling index polis and dokters
+a2f00db2702875c7d11ee92de90e367678df4fc4 5df3c95ea123a53b3e1c6afff48128dbca23d13c yovafebrian <yova.febrian512@gmail.com> 1760945023 +0700	commit: pembetulan pada tampilan awal
+5df3c95ea123a53b3e1c6afff48128dbca23d13c df60d41d781283ccab2508641f2abcd8ccd5b560 yovafebrian <yova.febrian512@gmail.com> 1761201112 +0700	commit: Implement Pasien and Obat management features; update routes and views for admin dashboard
+df60d41d781283ccab2508641f2abcd8ccd5b560 195ce2e3d674b3c58c2f08e0154336b877d9f580 yovafebrian <yova.febrian512@gmail.com> 1761306715 +0700	commit: Fix view paths and enhance edit form for Pasien management
