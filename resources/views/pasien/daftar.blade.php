@@ -9,15 +9,13 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <h1 class="mb-4">Poli</h1>
-
                 <section class="content">
-                    <div class="container-fluid">
+                    <div class="container-fluid ">
                         <div class="row">
                             {{-- Form Daftar Poli --}}
                             <div class="col-4">
-                                <div class="card">
-                                    <h5 class="card-header bg-gray">Daftar Poli</h5>
+                                <div class="card ">
+                                    <h5 class="card-header bg-gray ">Daftar Poli</h5>
                                     <div class="card-body">
                                         @if ($errors->any())
                                             <div class="alert alert-danger">
