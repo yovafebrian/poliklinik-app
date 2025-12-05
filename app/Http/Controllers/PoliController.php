@@ -38,7 +38,7 @@ class PoliController extends Controller
         ]);
 
         Poli::create($validated);
-        return redirect()->route('polis.index')->with('success', 'Poli created successfully.');
+        return redirect()->route('admin.polis.index')->with('success', 'Poli created successfully.');
     }
 
     /**
@@ -71,7 +71,7 @@ class PoliController extends Controller
         $poli = Poli::findOrFail($id);
         $poli->update($validated);
 
-        return redirect()->route('polis.index')->with('success', 'Poli updated successfully.');
+        return redirect()->route('admin.polis.index')->with('success', 'Poli updated successfully.');
     }
 
     /**
@@ -81,6 +81,6 @@ class PoliController extends Controller
     {
         $poli = Poli::findOrFail($id);
         $poli->delete();
-        return redirect()->route('polis.index')->with('success', 'Poli deleted successfully.');
+        return redirect()->route('admin.polis.index')->with('success', 'Poli deleted successfully.');
     }
 }

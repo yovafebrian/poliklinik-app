@@ -10,7 +10,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('pasiens.index') }}">Manajemen Pasien</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.pasiens.index') }}">Manajemen Pasien</a></li>
                         <li class="breadcrumb-item active">Edit Pasien</li>
                     </ol>
                 </div>
@@ -28,7 +28,7 @@
                             <h3 class="card-title">Form Edit Pasien</h3>
                         </div>
                         <!-- /.card-header -->
-                        <form action="{{ route('pasiens.update', $pasien->id) }}" method="POST">
+                        <form action="{{ route('admin.pasiens.update', $pasien->id) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="card-body">
@@ -100,7 +100,7 @@
 
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Update</button>
-                                <a href="{{ route('pasiens.index') }}" class="btn btn-secondary">Kembali</a>
+                                <a href="{{ route('admin.pasiens.index') }}" class="btn btn-secondary">Kembali</a>
                             </div>
                         </form>
                     </div>

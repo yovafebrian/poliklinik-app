@@ -7,7 +7,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Poli</span>
                         <span class="info-box-number">{{ \App\Models\Poli::count() }}</span>
-                        <a href="{{ route('polis.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('admin.polis.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Dokter</span>
                         <span class="info-box-number">{{ \App\Models\User::where('role','dokter')->count() }}</span>
-                        <a href="{{ route('dokters.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('admin.dokters.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Pasien</span>
                         <span class="info-box-number">{{ \App\Models\User::where('role','pasien')->count() }}</span>
-                        <a href="{{ route('pasiens.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('admin.pasiens.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Obat</span>
                         <span class="info-box-number">{{ \App\Models\Obat::count() }}</span>
-                        <a href="{{ route('obats.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('admin.obats.index') }}" class="small-box-footer text-white">Lihat detail <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>

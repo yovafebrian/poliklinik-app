@@ -5,7 +5,7 @@
                 <h1 class="mb-4">Edit Dokter</h1>
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('dokters.update', $dokter->id) }}" method="POST">
+                        <form action="{{ route('admin.dokters.update', $dokter->id) }}" method="POST">
                             @csrf
                             @method('PUT')
 
@@ -105,7 +105,7 @@
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-save"></i> Update
                                 </button>
-                                <a href="{{ route('dokters.index') }}" class="btn btn-secondary">kembali</a>
+                                <a href="{{ route('admin.dokters.index') }}" class="btn btn-secondary">kembali</a>
                             </div>
                         </form>
                     </div>

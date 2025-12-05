@@ -11,7 +11,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <a href="{{ route('jadwal-periksa.create') }}" class="btn btn-primary mb-3">
+                <a href="{{ route('dokter.jadwal-periksa.create') }}" class="btn btn-primary mb-3">
                     <i class="fas fa-plus"></i> Tambah Jadwal Periksa
                 </a>
                 <div class="table-responsive">
@@ -33,11 +33,11 @@
                                     <td>{{ \Carbon\Carbon::parse($jadwalPeriksa->jam_mulai)->format('H:i') }}</td>
                                     <td>{{ \Carbon\Carbon::parse($jadwalPeriksa->jam_selesai)->format('H:i') }}</td>
                                     <td>
-                                        <a href="{{ route('jadwal-periksa.edit', $jadwalPeriksa->id) }}"
+                                        <a href="{{ route('dokter.jadwal-periksa.edit', $jadwalPeriksa->id) }}"
                                             class="btn btn-sm btn-warning">
                                             <i class="fas fa-edit"></i> Edit
                                         </a>
-                                        <form action="{{ route('jadwal-periksa.destroy', $jadwalPeriksa->id) }}"
+                                        <form action="{{ route('dokter.jadwal-periksa.destroy', $jadwalPeriksa->id) }}"
                                             method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')

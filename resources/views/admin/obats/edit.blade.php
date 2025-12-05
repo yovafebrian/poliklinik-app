@@ -7,7 +7,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('obats.update', $obat->id) }}" method="POST">
+                        <form action="{{ route('admin.obats.update', $obat->id) }}" method="POST">
                             @csrf
                             @method('PUT')
 
@@ -56,7 +56,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-save"></i> Update
                                 </button>
-                                <a href="{{ route('obats.index') }}" class="btn btn-secondary">
+                                <a href="{{ route('admin.obats.index') }}" class="btn btn-secondary">
                                     <i class="fas fa-arrow-left"></i> Kembali
                                 </a>
                             </div>

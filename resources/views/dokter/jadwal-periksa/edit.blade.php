@@ -7,7 +7,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('jadwal-periksa.update', $jadwalPeriksa->id) }}" method="POST">
+                        <form action="{{ route('dokter.jadwal-periksa.update', $jadwalPeriksa->id) }}" method="POST">
                             @csrf
                             @method('PUT')
 

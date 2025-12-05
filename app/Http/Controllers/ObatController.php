@@ -41,7 +41,7 @@ class ObatController extends Controller
             'harga' => $request->harga,
         ]);
 
-        return redirect()->route('obats.index')->with('success', 'Obat berhasil ditambahkan.');
+        return redirect()->route('admin.obats.index')->with('success', 'Obat berhasil ditambahkan.');
     }
 
     /**
@@ -80,7 +80,7 @@ class ObatController extends Controller
             'harga' => $request->harga,
         ]);
 
-        return redirect()->route('obats.index')->with('success', 'Obat berhasil diperbarui.');
+        return redirect()->route('admin.obats.index')->with('success', 'Obat berhasil diperbarui.');
     }
 
     /**
@@ -91,6 +91,6 @@ class ObatController extends Controller
         $obat = Obat::findOrFail($id);
         $obat->delete();
 
-        return redirect()->route('obats.index')->with('success', 'Obat berhasil dihapus.');
+        return redirect()->route('admin.obats.index')->with('success', 'Obat berhasil dihapus.');
     }
 }

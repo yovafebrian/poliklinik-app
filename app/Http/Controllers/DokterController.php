@@ -106,7 +106,7 @@ class DokterController extends Controller
         //disimpan
         $dokter->update($updateData);
 
-        return redirect()->route('dokters.index')
+        return redirect()->route('admin.dokters.index')
             ->with('message', 'Data Dokter Berhasil di ubah')
             ->with('type','success');
     }
@@ -117,7 +117,7 @@ class DokterController extends Controller
     public function destroy(User $dokter)
     {
         $dokter->delete();
-        return redirect()->route('dokters.index')
+        return redirect()->route('admin.dokters.index')
             ->with('message', 'Data Dokter Berhasil dihapus')
             ->with('type', 'success');
     }

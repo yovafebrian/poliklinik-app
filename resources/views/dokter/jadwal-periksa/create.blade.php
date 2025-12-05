@@ -7,7 +7,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('jadwal-periksa.store') }}" method="POST">
+                        <form action="{{ route('dokter.jadwal-periksa.store') }}" method="POST">
                             @csrf
 
                             <div class="form-group mb-3">

@@ -35,7 +35,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Total Pasien</span>
                         <span class="info-box-number">{{ $pasienCount }}</span>
-                        <a href="{{ route('pasiens.index') }}" class="small-box-footer text-white">Lihat Pasien <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('dokter.periksa-pasien.index') }}" class="small-box-footer text-white">Lihat Pasien <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="card-body p-0">
                 @if($recentJadwals->isEmpty())
-                    <div class="p-3">Belum ada jadwal. <a href="{{ route('jadwal-periksa.create') }}">Tambahkan jadwal</a></div>
+                    <div class="p-3">Belum ada jadwal. <a href="{{ route('dokter.jadwal-periksa.create') }}">Tambahkan jadwal</a></div>
                 @else
                     <ul class="list-group list-group-flush">
                         @foreach($recentJadwals as $j)
@@ -74,8 +74,8 @@
                                     <div class="text-muted small">Poli: {{ $j->id_poli ?? '-' }}</div>
                                 </div>
                                 <div>
-                                    <a href="{{ route('jadwal-periksa.edit', $j->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
-                                    <form action="{{ route('jadwal-periksa.destroy', $j->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Hapus jadwal ini?')">
+                                    <a href="{{ route('dokter.jadwal-periksa.edit', $j->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
+                                    <form action="{{ route('dokter.jadwal-periksa.destroy', $j->id) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Hapus jadwal ini?')">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-sm btn-danger">Hapus</button>

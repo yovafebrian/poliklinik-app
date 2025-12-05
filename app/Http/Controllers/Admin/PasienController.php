@@ -37,7 +37,7 @@ class PasienController extends Controller
             'no_ktp' => 'required|string|max:20',
             'no_hp' => 'required|string|max:15',
             'alamat' => 'required|string',
-            'password' => 'required|string|min:8',
+            'password' => 'required|string|min:6',
         ]);
 
         User::create([
@@ -50,7 +50,7 @@ class PasienController extends Controller
             'alamat' => $request->alamat,
         ]);
 
-        return redirect()->route('pasiens.index')->with('success', 'Pasien berhasil ditambahkan.');
+        return redirect()->route('admin.pasiens.index')->with('success', 'Pasien berhasil ditambahkan.');
     }
 
     /**
@@ -100,7 +100,7 @@ class PasienController extends Controller
 
         $pasien->update($updateData);
 
-        return redirect()->route('pasiens.index')->with('success', 'Pasien berhasil diperbarui.');
+        return redirect()->route('admin.pasiens.index')->with('success', 'Pasien berhasil diperbarui.');
     }
 
     /**
@@ -111,6 +111,6 @@ class PasienController extends Controller
         $pasien = User::where('role', 'pasien')->findOrFail($id);
         $pasien->delete();
 
-        return redirect()->route('pasiens.index')->with('success', 'Pasien berhasil dihapus.');
+        return redirect()->route('admin.pasiens.index')->with('success', 'Pasien berhasil dihapus.');
     }
 }

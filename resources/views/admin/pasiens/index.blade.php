@@ -12,7 +12,7 @@
                 @endif
 
                 
-                <a href="{{ route('pasiens.create') }}" class="btn btn-primary mb-3">
+                <a href="{{ route('admin.pasiens.create') }}" class="btn btn-primary mb-3">
                     <i class="fas fa-plus"></i> Tambah Pasien
                 </a>
 
@@ -37,10 +37,10 @@
                                     <td>{{ $pasien->no_hp }}</td>
                                     <td>{{ $pasien->alamat }}</td>
                                     <td>
-                                        <a href="{{ route('pasiens.edit', $pasien->id) }}" class="btn btn-sm btn-warning">
+                                        <a href="{{ route('admin.pasiens.edit', $pasien->id) }}" class="btn btn-sm btn-warning">
                                             <i class="fas fa-edit"></i>Edit
                                         </a>
-                                        <form action="{{ route('pasiens.destroy', $pasien->id) }}" method="POST" style="display: inline-block;">
+                                        <form action="{{ route('admin.pasiens.destroy', $pasien->id) }}" method="POST" style="display: inline-block;">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus pasien ini ?')">

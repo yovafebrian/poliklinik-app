@@ -12,7 +12,7 @@
                 @endif
 
 
-                <a href="{{ route('obats.create') }}" class="btn btn-primary mb-3">
+                <a href="{{ route('admin.obats.create') }}" class="btn btn-primary mb-3">
                     <i class="fas fa-plus"></i> Tambah Obat
                 </a>
 
@@ -35,10 +35,10 @@
                                     <td>{{ $obat->kemasan }}</td>
                                     <td>Rp {{ number_format($obat->harga, 0, ',', '.') }}</td>
                                     <td>
-                                        <a href="{{ route('obats.edit', $obat->id) }}" class="btn btn-warning btn-sm">
+                                        <a href="{{ route('admin.obats.edit', $obat->id) }}" class="btn btn-warning btn-sm">
                                             <i class="fas fa-edit"></i> Edit
                                         </a>
-                                        <form action="{{ route('obats.destroy', $obat->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus obat ini?')">
+                                        <form action="{{ route('admin.obats.destroy', $obat->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus obat ini?')">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm">

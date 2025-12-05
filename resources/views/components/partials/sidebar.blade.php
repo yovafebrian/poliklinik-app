@@ -25,27 +25,27 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('polis.index') }}"
+                        <a href="{{ route('admin.polis.index') }}"
                             class="nav-link {{ request()->routeIs('polis.*') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-hospital nav-item"></i>
                             <p>Manajemen Poli</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('dokters.index') }}" class="nav-link {{ request()->routeIs('dokters.*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.dokters.index') }}" class="nav-link {{ request()->routeIs('dokters.*') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-user-md"></i>
                             <p>Manajemen Dokter</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('pasiens.index') }}" class="nav-link {{ request()->routeIs('pasiens.*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.pasiens.index') }}" class="nav-link {{ request()->routeIs('pasiens.*') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-user-injured"></i>
                             <p>Manajemen Pasien</p>
                         </a>
                 </li>
 
                     <li class="nav-item">
-                        <a href="{{ route('obats.index') }}" class="nav-link {{ request()->routeIs('obats.*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.obats.index') }}" class="nav-link {{ request()->routeIs('obats.*') ? 'active' : '' }}">
                             <i class="nav-icon fas fa-pills"></i>
                             <p>Manajemen Obat</p>
                         </a>
