@@ -11,19 +11,27 @@ class RiwayatPasienController extends Controller
 {
     public function index()
     {
+        $dokterId = Auth::id();
+
+        // Menampilkan riwayat pasien yang diperiksa oleh dokter yang sedang login
         $riwayatPasien = Periksa::with([
-            'daftarPoli.user',
+            'daftarPoli.pasien',
             'daftarPoli.jadwalPeriksa.dokter',
             'detailPeriksas.obat'
-        ])->orderBy('tanggal_periksa', 'desc')->get();
-    return view('dokter.riwayat-pasien.index', compact('riwayatPasien'));
+        ])
+        ->whereHas('daftarPoli.jadwalPeriksa', function ($query) use ($dokterId) {
+            $query->where('id_dokter', $dokterId);
+        })
+        ->orderBy('tgl_periksa', 'desc')->get();
+
+        return view('dokter.riwayat-pasien.index', compact('riwayatPasien'));
     }
 
     public function show($id)
     {
         $periksa = Periksa::with([
-            'daftarPoli.user',
-            'daftarPoli.jadwalPeriksa.dokter',
+            'daftarPoli.pasien',
+            'daftarPoli.jadwalPeriksa.dokter.poli',
             'detailPeriksas.obat'
         ])->findOrFail($id);
 

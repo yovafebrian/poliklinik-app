@@ -53,7 +53,7 @@ class JadwalPeriksaController extends Controller
             'jam_selesai' => $request->jam_selesai,
         ]);
 
-        return redirect()->route('jadwal-periksa.index')
+        return redirect()->route('dokter.jadwal-periksa.index')
         ->with('success', 'Jadwal Periksa berhasil ditambahkan.')
         ->with('type', 'success');
     }
@@ -89,7 +89,7 @@ class JadwalPeriksaController extends Controller
             'jam_selesai' => $request->jam_selesai
         ]);
 
-        return redirect()->route('jadwal-periksa.index')
+        return redirect()->route('dokter.jadwal-periksa.index')
         ->with('success', 'Jadwal Periksa berhasil diupdate.')
         ->with('type', 'success');
     }
@@ -102,7 +102,7 @@ class JadwalPeriksaController extends Controller
         $jadwalPeriksa = JadwalPeriksa::findOrFail($id);
         $jadwalPeriksa->delete();
 
-        return redirect()->route('jadwal-periksa.index')
+        return redirect()->route('dokter.jadwal-periksa.index')
         ->with('success', 'Jadwal Periksa berhasil dihapus.')
         ->with('type', 'success');
     }

@@ -35,7 +35,7 @@
                                         @if ($dp->periksas->isNotEmpty())
                                             <span class="badge bg-success">Sudah Diperiksa</span>
                                         @else
-                                            <a href="{{ route('periksa-pasien.create', ['daftar' => $dp->id]) }}"
+                                            <a href="{{ route('dokter.periksa-pasien.create', ['id' => $dp->id]) }}"
                                                 class="btn btn-sm btn-warning">
                                                 <i class="fas fa-edit"></i> Periksa
                                             </a>

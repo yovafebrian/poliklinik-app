@@ -56,7 +56,7 @@
                                 <button type="submit" class="btn btn-success">
                                     <i class="fas fa-save"></i> Update
                                 </button>
-                                <a href="{{ route('jadwal-periksa.index') }}" class="btn btn-secondary">
+                                <a href="{{ route('dokter.jadwal-periksa.index') }}" class="btn btn-secondary">
                                     <i class="fas fa-arrow-left"></i> Kembali
                                 </a>
                             </div>

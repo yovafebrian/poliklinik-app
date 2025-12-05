@@ -24,7 +24,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">Total Jadwal</span>
                         <span class="info-box-number">{{ $jadwalCount }}</span>
-                        <a href="{{ route('jadwal-periksa.index') }}" class="small-box-footer text-white">Kelola Jadwal <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('dokter.jadwal-periksa.index') }}" class="small-box-footer text-white">Kelola Jadwal <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                             <span class="info-box-number">-</span>
                             <p class="mb-0">Belum ada jadwal</p>
                         @endif
-                        <a href="{{ route('jadwal-periksa.index') }}" class="small-box-footer text-white">Kelola Jadwal <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ route('dokter.jadwal-periksa.index') }}" class="small-box-footer text-white">Kelola Jadwal <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>

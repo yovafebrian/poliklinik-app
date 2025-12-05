@@ -16,7 +16,7 @@ class Periksa extends Model
         'biaya_periksa',
     ];
 
-    public function daftarPolis()
+    public function daftarPoli()
     {
         return $this->belongsTo(DaftarPoli::class, 'id_daftar_poli');
     }

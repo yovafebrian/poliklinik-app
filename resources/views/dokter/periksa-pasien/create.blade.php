@@ -5,7 +5,7 @@
                 <i class="mb-4">Periksa Pasien</i>
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('periksa-pasien.store') }}" method="POST">
+                        <form action="{{ route('dokter.periksa-pasien.store') }}" method="POST">
                             @csrf
                             <input type="hidden" name="id_daftar_poli" value="{{ $id }}">
 
@@ -40,7 +40,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-success">Simpan</button>
-                            <a href="{{ route('periksa-pasien.index') }}" class="btn btn-secondary">Kembali</a>
+                            <a href="{{ route('dokter.periksa-pasien.index') }}" class="btn btn-secondary">Kembali</a>
                         </form>
                     </div>
                 </div>

@@ -55,7 +55,7 @@
                     <div class="card-body">
                         <h2>{{ \App\Models\JadwalPeriksa::count() }}</h2>
                         <p class="text-muted">Jumlah entri jadwal periksa yang tersimpan.</p>
-                        <a href="{{ route('jadwal-periksa.index') }}" class="btn btn-sm btn-primary">Kelola Jadwal Periksa</a>
+                        <a href="{{ route('admin.jadwal-periksa.index') }}" class="btn btn-sm btn-primary">Kelola Jadwal Periksa</a>
                     </div>
                 </div>
             </div>
