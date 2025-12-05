@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\ObatController;
 use App\Http\Controllers\ObatController as ControllersObatController;
 use App\Http\Controllers\Admin\PasienController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Dokter\PeriksaPasienController;
+use App\Http\Controllers\Dokter\PeriksaPasienController as DokterPeriksaPasienController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\JadwalPeriksaController;
 use App\Http\Controllers\Pasien\PoliController as PasienPoliController;
@@ -40,6 +42,14 @@ Route::middleware(['auth','role:dokter'])->prefix('dokter')->group(function () {
 
     // lindungi resource jadwal-periksa agar hanya dokter yang mengakses
     Route::resource('jadwal-periksa', JadwalPeriksaController::class);
+
+    // custom create route daftar id parameter
+    Route::get('periksa-pasien/{daftar}/create', [DokterPeriksaPasienController::class, 'create'])
+        ->name('periksa-pasien.create');
+
+    
+    Route::resource('periksa-pasien', DokterPeriksaPasienController::class)
+        ->except(['create']);
 });
 
 Route::middleware(['auth','role:pasien'])->prefix('pasien')->group(function () {

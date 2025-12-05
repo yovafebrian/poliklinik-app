@@ -29,7 +29,6 @@ class JadwalPeriksaController extends Controller
      */
     public function create()
     {
-        //
         return view('dokter.jadwal-periksa.create');
     }
 
