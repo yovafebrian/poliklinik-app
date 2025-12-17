@@ -58,7 +58,7 @@ class DokterController extends Controller
 
 
 
-        return redirect()->route('dokters.index')
+        return redirect()->route('admin.dokters.index')
             ->with('message', 'Data Dokter Berhasil di tambahkan')
             ->with('type', 'success');
     }
