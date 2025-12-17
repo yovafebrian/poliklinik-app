@@ -42,6 +42,7 @@ class PeriksaPasienController extends Controller
 
         $obatIds = json_decode($request->obat_json, true);
 
+        // Simpan data pemeriksaan
         $periksa = Periksa::create([
             'id_daftar_poli' => $request->id_daftar_poli,
             'tgl_periksa' => now(),
@@ -50,12 +51,21 @@ class PeriksaPasienController extends Controller
             'biaya_periksa' => $request->biaya_periksa + 150000,
         ]);
 
+        // loop obat yang dipilih dan simpan ke detail_periksas
         foreach ($obatIds as $idObat) {
+        $obat = Obat::find($idObat);
+        
+        if ($obat && $obat->stok > 0) {
+            // Simpan detail periksa
             DetailPeriksa::create([
                 'id_periksa' => $periksa->id,
-                'id_obat' => $idObat,
+                'id_obat'    => $idObat,
             ]);
+
+            // Kurangi stok obat
+            $obat->decrement('stok');
         }
+    }
 
         return redirect()->route('dokter.periksa-pasien.index')->with('success', 'Data periksa berhasil disimpan.');
     }

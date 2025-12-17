@@ -14,9 +14,12 @@
                                 <select id="select-obat" class="form-select">
                                     <option value="">Pilih Obat</option>
                                     @foreach ($obats as $obat)
-                                        <option value="{{ $obat->id }}" data-nama="{{ $obat->nama_obat }}"
-                                            data-harga="{{ $obat->harga }}">
-                                            {{ $obat->nama_obat }} - Rp{{ number_format($obat->harga) }}
+                                        <option value="{{ $obat->id }}" 
+                                                data-nama="{{ $obat->nama_obat }}" 
+                                                data-harga="{{ $obat->harga }}"
+                                                {{ $obat->stok <= 0 ? 'disabled' : '' }}> {{-- Nonaktifkan jika stok habis --}}
+                                            {{ $obat->nama_obat }} - Rp{{ number_format($obat->harga) }} 
+                                            (Stok: {{ $obat->stok }}) {{-- Menampilkan info stok --}}
                                         </option>
                                     @endforeach
                                 </select>

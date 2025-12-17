@@ -33,12 +33,14 @@ class ObatController extends Controller
             'nama_obat' => 'required|string|max:255',
             'kemasan' => 'required|string|max:255',
             'harga' => 'required|numeric|min:0',
+            'stok' => 'required|integer|min:0', // Validasi untuk stok
         ]);
 
         Obat::create([
             'nama_obat' => $request->nama_obat,
             'kemasan' => $request->kemasan,
             'harga' => $request->harga,
+            'stok' => $request->stok, // Simpan stok
         ]);
 
         return redirect()->route('admin.obats.index')->with('success', 'Obat berhasil ditambahkan.');
@@ -72,12 +74,14 @@ class ObatController extends Controller
             'nama_obat' => 'required|string|max:255',
             'kemasan' => 'required|string|max:255',
             'harga' => 'required|numeric|min:0',
+            'stok' => 'required|integer|min:0', // Validasi untuk stok
         ]);
 
         $obat->update([
             'nama_obat' => $request->nama_obat,
             'kemasan' => $request->kemasan,
             'harga' => $request->harga,
+            'stok' => $request->stok, // Update stok
         ]);
 
         return redirect()->route('admin.obats.index')->with('success', 'Obat berhasil diperbarui.');

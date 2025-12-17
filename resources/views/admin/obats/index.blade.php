@@ -24,6 +24,7 @@
                                 <th>Nama Obat</th>
                                 <th>Kemasan</th>
                                 <th>Harga</th>
+                                <th>Stok</th>
                                 <th style="width: 150px;">Aksi</th>
                             </tr>
                         </thead>
@@ -34,6 +35,7 @@
                                     <td>{{ $obat->nama_obat }}</td>
                                     <td>{{ $obat->kemasan }}</td>
                                     <td>Rp {{ number_format($obat->harga, 0, ',', '.') }}</td>
+                                    <td>{{ $obat->stok }}</td>
                                     <td>
                                         <a href="{{ route('admin.obats.edit', $obat->id) }}" class="btn btn-warning btn-sm">
                                             <i class="fas fa-edit"></i> Edit
