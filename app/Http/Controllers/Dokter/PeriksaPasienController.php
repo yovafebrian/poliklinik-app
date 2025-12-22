@@ -34,15 +34,17 @@ class PeriksaPasienController extends Controller
 
     public function store(Request $request)
     {
+        // validasi input memastikan data yang dikirim lengkap sebelum disimpan
         $request->validate([
             'obat_json' => 'required',
             'catatan' => 'nullable|string',
             'biaya_periksa' => 'required|integer',
         ]);
 
+        // mengubah JSON obat yang dipilih menjadi array agar bisa diproses oleh php
         $obatIds = json_decode($request->obat_json, true);
 
-        // Simpan data pemeriksaan
+        // Simpan data pemeriksaan ke dalam tabel 'periksas'
         $periksa = Periksa::create([
             'id_daftar_poli' => $request->id_daftar_poli,
             'tgl_periksa' => now(),
