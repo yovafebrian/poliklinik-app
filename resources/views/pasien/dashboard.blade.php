@@ -46,7 +46,7 @@
                 <div class="info-box bg-primary">
                     <span class="info-box-icon"><i class="fas fa-user-check"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Registrasi Saya</span>
+                        <span class="info-box-text">Registrasi Sayaaa</span>
                         <span class="info-box-number">{{ \App\Models\DaftarPoli::where('id_pasien', $user->id)->count() }}</span>
                     </div>
                 </div>

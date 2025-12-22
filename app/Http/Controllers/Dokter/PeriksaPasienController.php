@@ -23,6 +23,7 @@ class PeriksaPasienController extends Controller
             ->orderBy('no_antrian')
             ->get();
 
+        // nampilin view dengan data daftarPasien
         return view('dokter.periksa-pasien.index', compact('daftarPasien'));
     }
 
@@ -68,7 +69,7 @@ class PeriksaPasienController extends Controller
             $obat->decrement('stok');
         }
     }
-
+        // Update status daftar poli menjadi 'selesai'
         return redirect()->route('dokter.periksa-pasien.index')->with('success', 'Data periksa berhasil disimpan.');
     }
 }
